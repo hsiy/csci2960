@@ -1,4 +1,5 @@
 /**
+ * Original code from: https://users.cis.fiu.edu/~weiss/dsaajava3/code/Sort.java
  * A class that contains several sorting routines,
  * implemented as static methods.
  * Arrays are rearranged with smallest item first,
@@ -41,8 +42,7 @@ public final class Sort
 			for( int i = gap; i < a.length; i++ )
 			{
 				AnyType tmp = a[ i ];
-				for( j = i; j >= gap &&
-							tmp.compareTo( a[ j - gap ] ) < 0; j -= gap )
+				for( j = i; j >= gap && tmp.compareTo( a[ j - gap ] ) < 0; j -= gap )
 					a[ j ] = a[ j - gap ];
 				a[ j ] = tmp;
 			}
